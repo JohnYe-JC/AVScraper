@@ -421,6 +421,13 @@ while input_start_key == '':
                         float_score = float_score * 0.85
                     elif (usersNum < 300) and (float_score > 8.4):
                         float_score = float_score * 0.9
+                    # print(actors)
+                    # print(studio)
+                    # actors or studio
+                    if "JULIA" in actors:
+                        float_score = float_score * 0.83
+                    if studio == "Fitch":
+                        float_score = float_score * 0.9
                     #end 避免小众高分影片霸榜的算法
                     if float_score >= 0:
                         score = '%.1f' % float_score
