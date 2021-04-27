@@ -122,8 +122,9 @@ dict_genre = better_dict_genre('Javlibrary', to_language)
 input_start_key = ''
 while input_start_key == '':
     # 用户：选择需要整理的文件夹
-    print('请选择要整理的文件夹：', end='')
-    root_choose = choose_directory()
+    #print('请选择要整理的文件夹：', end='')
+    #root_choose = choose_directory()
+    root_choose = "/home/Drive/Downloads/Aria2/Scraping/"
     print(root_choose)
     # 日志：在txt中记录一下用户的这次操作，在某个时间选择了某个文件夹
     record_start(root_choose)
@@ -223,6 +224,13 @@ while input_start_key == '':
             # 判断是否是无码流出的作品，同理
             bool_divulge = judge_exist_divulge(root, jav.name_no_ext, list_divulge_words_in_filename)
             dict_data['是否流出'] = settings.custom_divulge_expression if bool_divulge else ''
+            if bool_subtitle:
+                dict_data['是否中字'] = '-C'
+            else:
+                dict_data['是否中字'] = ''
+            #print("dict_data['是否中字']=" + str(dict_data['是否中字']))
+
+            #exit()
 
             # 影片的相对于所选文件夹的路径，用于报错
             path_relative = sep + jav.path.replace(root_choose, '')
