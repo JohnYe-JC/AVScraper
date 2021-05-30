@@ -300,7 +300,7 @@ while input_start_key == '':
                 else:
                     url_poster = ''
                 # 发行日期
-                premieredg = re.search(r'日期</b>: (\d\d\d\d-\d\d-\d\d)<br>', html_web)
+                premieredg = re.search(r'始日</b>: (\d\d\d\d-\d\d-\d\d)<br>', html_web)
                 if str(premieredg) != 'None':
                     dict_data['发行年月日'] = time_premiered = premieredg.group(1)
                     dict_data['发行年份'] = time_premiered[0:4]
