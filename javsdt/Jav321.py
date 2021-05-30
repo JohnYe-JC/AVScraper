@@ -299,7 +299,7 @@ while input_start_key == '':
                     url_poster = posterg.group(1)
                 else:
                     url_poster = ''
-                # 发行日期
+                # 发行日期， “日期”改为“始日”
                 premieredg = re.search(r'始日</b>: (\d\d\d\d-\d\d-\d\d)<br>', html_web)
                 if str(premieredg) != 'None':
                     dict_data['发行年月日'] = time_premiered = premieredg.group(1)
