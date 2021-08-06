@@ -33,6 +33,7 @@ python JavbusYouma.py
 * javlibrary免翻墙刮削出错建议更换网址，图书馆官方网址发布：http://www.javlibrary.com/cn/publictopic.php?id=13483
 
 ## Log 记录
+- [x] 21.6.7 fix JavBus图片刮削
 - [x] 21.2.25 fix JavBus有码无法刮削genre和tag
 - [x] 21.3.4 fix JavBus无码无法刮削genre和tag
 - [x] 21.4.2 fix javlibrary评分错乱的问题，移除作者瞎搞的评分算法，忠于图书馆的评分。修复由于cf造成的无法获取javlibrary网页的问题，但需要用户安装最新版node.js并且在命令行执行
